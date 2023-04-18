@@ -1,0 +1,96 @@
+.cases
+  &__content-wrapper
+    @include section-margin
+
+  &__content
+    top: -999px
+    left: -999px
+    position: absolute
+    display: block
+    opacity: 0
+    z-index: -10
+    padding-bottom: 100px
+    max-height: 0
+    transition: opacity .5s
+    max-width: 100%
+
+    @media (max-width: 991px)
+      padding-bottom: 50px
+    &--active
+      position: static
+      opacity: 1
+      z-index: 100
+      max-height: 100%
+
+  &__title-main
+    @include section-title-color(#3C3C3C, 40px)
+
+  &__title
+    font-weight: 400
+    font-size: 32px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    color: #3B3B3B
+    margin-bottom: 20px
+
+
+  &__description-inner
+    display: flex
+    align-items: center
+    gap: 0 17px
+    margin-bottom: 25px
+    @media (max-width: 1240px)
+      flex-wrap: wrap
+      gap: 15px
+
+  &__description
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 15px 25px
+    font-size: 16px
+    line-height: 1
+    letter-spacing: 0.03em
+    color: #FFFFFF
+    background: rgba(152, 152, 152, .5 )
+    border-radius: 2px
+    min-height: 40px
+    cursor: pointer
+    @media (max-width: 1440px)
+      padding: 10px 15px
+      font-size: 14px
+    @media (max-width: 768px)
+      font-size: 12px
+    &--active
+      background: #F28153
+
+  &__wrapper
+    position: relative
+    height: 680px
+    box-sizing: border-box
+    background: white
+    border-radius: 2px
+    padding: 35px 40px
+    box-shadow: 0px 4px 45px rgba(77, 77, 77, 0.14)
+    @media (max-width: 1440px)
+      height: auto
+    @media (max-width: 1240px)
+      padding: 25px 20px
+    @media (max-width: 560px)
+      padding: 25px 0 40px 15px
+    & .swiper-custom__pagination-inner
+      width: calc(100% - 85px)
+      @media (max-width: 560px)
+        width: calc(100% - 30px)
+
+  &__link
+    @extend .hero__link
+    margin-top: 60px
+    justify-content: flex-end
+    @media (max-width: 1440px)
+      margin-top: 45px
+    @media (max-width: 1200px)
+      margin-top: 30px
+
+
+

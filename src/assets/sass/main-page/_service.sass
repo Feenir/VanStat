@@ -1,0 +1,184 @@
+.service
+  margin-bottom: 100px
+
+  &__title
+    @extend .cases__title-main
+  &__inner
+    position: relative
+    display: flex
+    align-items: stretch
+    counter-reset: service-counter 0
+    gap: 0 20px
+    @media (max-width: 1080px)
+      flex-wrap: wrap
+      gap: 20px
+      justify-content: center
+
+  &__image
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    opacity: 0
+    transition: opacity .5s
+
+  &__items
+    position: relative
+    display: flex
+    flex-direction: column
+    width: calc(33.33% - 10px)
+    counter-increment: service-counter 1
+    border-radius: 2px
+    padding: 35px 20px 12px 20px
+    min-height: 444px
+    background: #FFFFFF
+    box-shadow: 0px 4px 45px rgba(77, 77, 77, 0.14)
+    @media (max-width: 1080px)
+      width: calc(50% - 10px)
+    @media (max-width: 991px)
+      min-height: 380px
+      padding: 25px 20px 20px
+    @media (max-width: 768px)
+      width: 100%
+    &:before
+      display: block
+      content: "0" counter(service-counter) " "
+      font-size: 32px
+      line-height: 137.19%
+      letter-spacing: 0.03em
+      color: rgba(242, 129, 83, 1)
+      margin-bottom: 10px
+      z-index: 10
+      transition: color .5s
+      @media (max-width: 1440px)
+        font-size: 30px
+      @media (max-width: 1200px)
+        font-size: 28px
+      @media (max-width: 991px)
+        font-size: 26px
+      @media (max-width: 768px)
+        font-size: 24px
+    &:after
+      content: ''
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0) 68.44%)
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      pointer-events: none
+      opacity: 0
+      z-index: 1
+      transition: opacity .5s
+    &:hover:after
+      @media #{$mouse-device}
+        opacity: 1
+    &:hover:before
+      @media #{$mouse-device}
+        color: #FFFFFF
+    &:hover .service__item-title
+      @media #{$mouse-device}
+        color: #FFFFFF
+    &:hover  .service__item-text
+      @media #{$mouse-device}
+        color: #FFFFFF
+    &:hover .service__coast
+      @media #{$mouse-device}
+        color: #FFFFFF
+    &:hover .service__image
+      @media #{$mouse-device}
+        opacity: 1
+    &:hover .service__fake-button
+      @media #{$mouse-device}
+        background-color: #F4F4F4
+    &:hover .service__fake-button > .service__arrow path
+      @media #{$mouse-device}
+        stroke: #F28153
+
+  &__item-title,  &__item-text ,  &__coast, &__fake-button
+    position: relative
+    z-index: 10
+
+  &__item-title,  &__item-text ,  &__coast
+    transition: color .5s
+    color: #3C3C3C
+
+  &__item-title
+    font-weight: 600
+    font-size: 20px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    margin-bottom: 10px
+    @media (max-width: 768px)
+      font-size: 18px
+
+  &__item-text
+    font-weight: 300
+    font-size: 16px
+    line-height: 22px
+    letter-spacing: 0.03em
+    @media (max-width: 768px)
+      font-size: 14px
+      line-height: 20px
+
+  &__coast
+    margin-top: auto
+    margin-bottom: 0
+    font-weight: 600
+    font-size: 20px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    @media (max-width: 768px)
+      font-size: 18px
+
+  &__fake-button
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    right: 0
+    bottom: 0
+    transition: background-color .5s
+    @media (max-width: 991px)
+      bottom: 10px
+
+  &__arrow path
+    stroke: #3C3C3C
+    transition: stroke .5s
+
+  &__link
+    @extend .hero__link
+    margin-top: 60px
+    justify-content: flex-end
+    @media (max-width: 991px)
+      margin-top: 30px
+      font-size: 16px
+  & .contour-inner
+    left: 180px
+    bottom: -50px
+    & .contour
+      height: 450px
+      left: 80px
+
+  &__svg
+    margin: auto 0
+    align-self: center
+    max-height: 105px
+    max-width: 105px
+    @media (max-width: 1440px)
+      max-height: 80px
+      max-width: 80px
+    @media (max-width: 768px)
+      max-height: 56px
+      max-width: 56px
+
+
+
+    

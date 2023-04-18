@@ -1,0 +1,157 @@
+.contacts
+  @include section-margin
+  &__title
+    @include section-title-color(#3C3C3C, 40px)
+  &__inner
+    position: relative
+    display: flex
+    align-items: stretch
+    padding: 70px 100px 70px 70px
+    background: #FFFFFF
+    box-shadow: 0px 4px 45px rgba(77, 77, 77, 0.14)
+    border-radius: 2px
+    @media (max-width: 1440px)
+      padding: 50px 80px 50px 50px
+    @media (max-width: 1200px)
+      padding: 35px 65px 35px 35px
+    @media (max-width: 991px)
+      flex-direction: column
+    @media (max-width: 768px)
+      padding: 25px 20px 40px 20px
+    &:before
+      position: absolute
+      content: url("data:image/svg+xml,%3Csvg width='65' height='68' viewBox='0 0 65 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10H65V2C65 0.89543 64.1046 0 63 0H0V10Z' fill='%23F28153'/%3E%3Cpath d='M55 10L55 68H65V10H55Z' fill='%23F28153'/%3E%3C/svg%3E%0A")
+      top: 0
+      right: 0
+
+  &__text-block
+    border-right: 1px solid rgba(60, 60, 60, 0.15)
+    padding-right: 20px
+    @media (max-width: 991px)
+      border-right: none
+      border-bottom: 1px solid rgba(60, 60, 60, 0.15)
+      padding-right: 0
+      padding-bottom: 35px
+      margin-bottom: 35px
+
+
+  &__info
+    font-weight: 300
+    font-size: 16px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    color: #3C3C3C
+    margin-bottom: 10px
+    @media (max-width: 1440px)
+      font-size: 14px
+    @media (max-width: 991px)
+      font-size: 12px
+
+  &__info-link
+    display: block
+    font-weight: 600
+    font-size: 20px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    color: #3C3C3C
+    margin-bottom: 35px
+    max-width: 360px
+    @media (max-width: 1440px)
+      font-size: 18px
+      margin-bottom: 30px
+    @media (max-width: 991px)
+      font-size: 16px
+
+  &__form
+    display: flex
+    align-items: flex-end
+    padding-left: 40px
+    @media (max-width: 991px)
+      flex-direction: column
+      padding-left: 0
+
+  &__form-inner
+    display: flex
+    flex-direction: column
+    height: 100%
+    @media (max-width: 991px)
+      width: 100%
+
+  &__form-title
+    font-weight: 600
+    font-size: 32px
+    line-height: 38px
+    letter-spacing: 0.03em
+    color: #3C3C3C
+    margin-bottom: 50px
+    @media (max-width: 1440px)
+      font-size: 26px
+      line-height: 32px
+    @media (max-width: 991px)
+      font-size: 20px
+      line-height: 26px
+
+  &__label
+    display: block
+    border-bottom: 1px solid #3C3C3C
+    width: 100%
+    &--textarea
+      border: 1px solid #3C3C3C
+    &:not(:last-child)
+      margin-bottom: 35px
+
+  &__input
+    font-family: 'Jost', sans-serif
+    box-sizing: border-box
+    padding: 4px 0 8px 20px
+    min-width: 605px
+    font-size: 18px
+    color: #3C3C3C
+    @media (max-width: 1440px)
+      font-size: 16px
+      min-width: 530px
+    @media (max-width: 1200px)
+      min-width: 450px
+    @media (max-width: 1080px)
+      min-width: 380px
+    @media (max-width: 991px)
+      min-width: unset
+      font-size: 14px
+    &::placeholder
+      font-weight: 300
+      font-size: inherit
+      line-height: 137.19%
+      letter-spacing: 0.03em
+      color: #3C3C3C
+      opacity: 0.5
+      
+    &--textarea
+      padding-top: 12px
+      min-height: 180px
+
+  &__button
+    @extend .hero__link
+    margin-left: 35px
+    background: none
+    @media (max-width: 1440px)
+      font-size: 18px
+    @media (max-width: 991px)
+      margin-left: 0
+      margin-top: 25px
+      font-size: 16px
+
+  &__social-inner
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    gap: 0 15px
+  &__social
+    max-width: 35px
+    max-height: 35px
+    @media (max-width: 991px)
+      max-width: 25px
+      max-height: 25px
+
+
+
+

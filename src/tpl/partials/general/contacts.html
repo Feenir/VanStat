@@ -1,0 +1,45 @@
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__wrapper">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__inner">
+                <div class="contacts__text-block">
+                    <p class="contacts__info">Телефон</p>
+                    <a class="contacts__info-link" href="tel:{{data.phoneHref}}">{{data.phone}}</a>
+                    <p class="contacts__info">Почта</p>
+                    <a class="contacts__info-link" href="mailto:{{data.mail}}">{{data.mail}}</a>
+                    <p class="contacts__info">Адрес</p>
+                    <p class="contacts__info-link">{{data.address}}</p>
+                    <p class="contacts__info">Соц.сети</p>
+                    <div class="contacts__social-inner">
+                        <svg class="contacts__social">
+                            <use xlink:href="assets/images/svg/set.svg#plug-social"></use>
+                        </svg>
+                        <svg class="contacts__social">
+                            <use xlink:href="assets/images/svg/set.svg#plug-social"></use>
+                        </svg>
+                        <svg class="contacts__social">
+                            <use xlink:href="assets/images/svg/set.svg#plug-social"></use>
+                        </svg>
+                    </div>
+                </div>
+                <form class="contacts__form" action="#">
+                   <fieldset class="contacts__form-inner">
+                       <legend class="contacts__form-title">Оставить заявку</legend>
+                       <label class="contacts__label">
+                           <input class="contacts__input" type="text" placeholder="Номер">
+                       </label>
+                       <label class="contacts__label">
+                           <input class="contacts__input" type="text" placeholder="Почта">
+                       </label>
+                       <label class="contacts__label contacts__label--textarea">
+                           <textarea class="contacts__input contacts__input--textarea" placeholder="Комментарий"></textarea>
+                       </label>
+                   </fieldset>
+                    <button class="contacts__button" type="submit">отправить</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,108 @@
+.jobs
+  position: relative
+  display: block
+  background-color: #ECE6D6
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(0, 0, 0, 0.54)
+    outline: 1px solid rgba(255, 255, 255, 0.2)
+    backdrop-filter: blur(2px)
+    z-index: 100
+    transition: background .5s
+    @media (max-width: 1080px)
+      display: none
+  &:hover:before
+    @media #{$mouse-device}
+      background-color: #ECE6D6
+      backdrop-filter: none
+      z-index: -1
+  &:hover
+    @media #{$mouse-device}
+      & .jobs__fake-button
+        background-color: #FFFFFF
+  &:hover
+    @media #{$mouse-device}
+      & .jobs__title, .jobs__company-name, .jobs__text
+        color: #2B2B2B
+
+
+  &__wrapper
+    padding: 38px 20px 10px 20px
+    @media (max-width: 1440px)
+      padding: 25px 20px 10px 20px
+
+
+  &__title
+    font-size: 14px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    color: #2B2B2B
+    margin-bottom: 14px
+    @media (max-width: 1440px)
+      font-size: 12px
+      margin-bottom: 6px
+
+  &__company-name
+    font-weight: 600
+    font-size: 20px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    margin-bottom: 24px
+    color: #2B2B2B
+    @media (max-width: 1440px)
+      font-size: 18px
+      margin-bottom: 16px
+    @media (max-width: 768px)
+      font-size: 16px
+
+  &__text
+    font-weight: 300
+    font-size: 16px
+    line-height: 137.19%
+    letter-spacing: 0.03em
+    margin-bottom: 28px
+    color: #2B2B2B
+    @media (max-width: 1440px)
+      font-size: 14px
+      margin-bottom: 36px
+
+  &__title, &__company-name, &__text
+    color: white
+    position: relative
+    z-index: 101
+    transition: color .5s
+    @media (max-width: 1080px)
+      color: #2B2B2B
+
+
+  &__image-wrapper
+    width: 100%
+    display: flex
+    justify-content: center
+    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.17))
+
+  &__fake-button
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    margin-right: 0
+    margin-left: auto
+    bottom: -2px
+    right: -2px
+    transition: background-color .3s
+    @media (max-width: 1080px)
+      background-color: #FFFFFF
+    &:before
+      position: absolute
+      content: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_67_839)'%3E%3Cpath d='M0 7.5L11.875 7.5' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.5 3.125L11.875 7.5L7.5 11.875' stroke='black' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_67_839'%3E%3Crect width='15' height='15' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
+      transform: translateY(2px)

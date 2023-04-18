@@ -1,0 +1,16 @@
+.cost
+  position: relative
+  height: 870px
+  @extend .about
+  @media (max-width: 1440px)
+    height: 780px
+  &__inner
+    background-image: url("../images/about/about-bg.png")
+    height: 100%
+    @include backgroundPosition(top, right, 20px)
+
+  &__title
+    @extend .about__title
+    align-self: flex-start
+  &__wrapper
+    @extend .about__inner

@@ -5,7 +5,7 @@
 node_modules/
 
  #Исключаем из GIT файлы на продакшн
-src/
+dist/
 
 
 

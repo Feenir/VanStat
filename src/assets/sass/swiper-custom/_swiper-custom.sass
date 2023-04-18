@@ -1,0 +1,93 @@
+.swiper-custom
+  overflow: visible
+  &__pagination-inner
+    position: absolute
+    width: calc(100% - 18px)
+    bottom: 37px
+
+  &__fraction
+    display: flex
+    align-items: baseline
+
+  &__current
+    font-size: 24px
+    line-height: .8
+    letter-spacing: 0.03em
+    color: #F28153
+
+  &__separator, &__total
+    font-size: 14px
+    line-height: 1
+    letter-spacing: 0.03em
+    color: rgba(242, 129, 83, 0.5)
+
+  &__separator
+    margin-left: 3px
+
+  &__pagination.swiper-pagination
+    background: rgba(242, 129, 83, 0.4)
+    height: 1px
+
+  &__pagination .swiper-pagination-progressbar-fill
+    height: 2px
+    background-color: rgba(242, 129, 83, 0.8)
+    top: -1px
+
+  &__arrow-inner
+    display: flex
+    align-items: center
+    & .swiper-button-disabled
+      opacity: .5
+
+  &__arrow
+    position: relative
+    width: 6px
+    height: 12px
+    z-index: 1000
+    cursor: pointer
+    transition: opacity .5s
+    &--prev
+      transform: rotateY(180deg)
+      margin-right: 35px
+
+
+  &__fraction-inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+
+
+  & .swiper-pagination
+    position: relative
+    top: auto
+    bottom: -11px
+
+  &__progressbar-icon
+    position: absolute
+    display: block
+    width: 8px
+    height: 8px
+    background: #F28153
+    box-shadow: 0px 0px 4px #F28153
+    border-radius: 50%
+    bottom: -14px
+    z-index: 1000
+
+.swiper-custom
+  &--white
+    & .swiper-custom__pagination
+       background-color: rgba(222, 222, 222, .8)
+    & .swiper-pagination-progressbar-fill
+      background-color: white
+    & .swiper-custom__progressbar-icon
+      box-shadow: 0px 0px 4px white
+      background: white
+    & .swiper-custom__current
+      color: white
+    & .swiper-custom__separator, .swiper-custom__total
+      color: rgba(222, 222, 222, .8)
+
+
+
+
