@@ -1,0 +1,25 @@
+<div class="popup js-popup">
+    <div class="popup__body">
+        <div class="popup__form">
+           {{> form}}
+        </div>
+        <div class="popup__image-inner">
+            <img class="popup__image" src="assets/images/popup/popup.jpg" alt="#">
+        </div>
+
+        <svg class="popup__close jsPopup-close">
+            <use class="close-icon-color" xlink:href="assets/images/svg/set.svg#close-icon"></use>
+        </svg>
+    </div>
+</div>
+
+<style>
+    .close-icon-color {
+        --color-icon: #fff;
+    }
+    @media (max-width: 991px) {
+        .close-icon-color {
+            --color-icon: #3c3c3c;
+        }
+    }
+</style>

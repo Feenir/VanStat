@@ -131,3 +131,32 @@ for (let anchor of anchors) {
     })
 }
 
+
+// ===============================================
+// 			Всплыващка
+// ===============================================
+
+$('.jsPopup-open').click(function (e) {
+    e.preventDefault
+    $('.js-popup').fadeIn().css('display', 'flex');
+});
+
+$('.jsPopup-close').click(function () {
+    $(this).parents('.popup').fadeOut();
+
+});
+
+$(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+        e.stopPropagation();
+        $('.popup').fadeOut();
+
+    }
+});
+
+$('.popup').click(function (e) {
+    if ($(e.target).closest('.popup__body').length == 0) {
+        $(this).fadeOut();
+    }
+});
+

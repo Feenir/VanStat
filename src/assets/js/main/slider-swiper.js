@@ -125,6 +125,7 @@ sliderActive()
 const teamSlider = new Swiper(".team-swiper", {
     slidesPerView: 4,
     spaceBetween: 10,
+    slidesOffsetAfter: 1025,
     pagination: {
         el: ".team__text-pagination",
         type: "progressbar",
@@ -158,6 +159,7 @@ const teamSlider = new Swiper(".team-swiper", {
         progress(swiper, progress) {
             if (swiper.progressIconEl) {
                 const fractions = swiper.slides.length - swiper.params.slidesPerView + 1;
+                let lerp = (a, b, t) => a * (1 - t) + b * t;
                 const t = lerp(1 / fractions, 1, progress);
                 swiper.progressIconEl.style.left = `calc(${t * 100}% - 4px)`;
             }

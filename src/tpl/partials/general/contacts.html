@@ -23,21 +23,10 @@
                         </svg>
                     </div>
                 </div>
-                <form class="contacts__form" action="#">
-                   <fieldset class="contacts__form-inner">
-                       <legend class="contacts__form-title">Оставить заявку</legend>
-                       <label class="contacts__label">
-                           <input class="contacts__input" type="text" placeholder="Номер">
-                       </label>
-                       <label class="contacts__label">
-                           <input class="contacts__input" type="text" placeholder="Почта">
-                       </label>
-                       <label class="contacts__label contacts__label--textarea">
-                           <textarea class="contacts__input contacts__input--textarea" placeholder="Комментарий"></textarea>
-                       </label>
-                   </fieldset>
-                    <button class="contacts__button" type="submit">отправить</button>
-                </form>
+                <div class="contacts__form">
+                    {{> form}}
+                </div>
+
             </div>
 
         </div>

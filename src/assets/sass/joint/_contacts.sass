@@ -62,84 +62,6 @@
     @media (max-width: 991px)
       font-size: 16px
 
-  &__form
-    display: flex
-    align-items: flex-end
-    padding-left: 40px
-    @media (max-width: 991px)
-      flex-direction: column
-      padding-left: 0
-
-  &__form-inner
-    display: flex
-    flex-direction: column
-    height: 100%
-    @media (max-width: 991px)
-      width: 100%
-
-  &__form-title
-    font-weight: 600
-    font-size: 32px
-    line-height: 38px
-    letter-spacing: 0.03em
-    color: #3C3C3C
-    margin-bottom: 50px
-    @media (max-width: 1440px)
-      font-size: 26px
-      line-height: 32px
-    @media (max-width: 991px)
-      font-size: 20px
-      line-height: 26px
-
-  &__label
-    display: block
-    border-bottom: 1px solid #3C3C3C
-    width: 100%
-    &--textarea
-      border: 1px solid #3C3C3C
-    &:not(:last-child)
-      margin-bottom: 35px
-
-  &__input
-    font-family: 'Jost', sans-serif
-    box-sizing: border-box
-    padding: 4px 0 8px 20px
-    min-width: 605px
-    font-size: 18px
-    color: #3C3C3C
-    @media (max-width: 1440px)
-      font-size: 16px
-      min-width: 530px
-    @media (max-width: 1200px)
-      min-width: 450px
-    @media (max-width: 1080px)
-      min-width: 380px
-    @media (max-width: 991px)
-      min-width: unset
-      font-size: 14px
-    &::placeholder
-      font-weight: 300
-      font-size: inherit
-      line-height: 137.19%
-      letter-spacing: 0.03em
-      color: #3C3C3C
-      opacity: 0.5
-      
-    &--textarea
-      padding-top: 12px
-      min-height: 180px
-
-  &__button
-    @extend .hero__link
-    margin-left: 35px
-    background: none
-    @media (max-width: 1440px)
-      font-size: 18px
-    @media (max-width: 991px)
-      margin-left: 0
-      margin-top: 25px
-      font-size: 16px
-
   &__social-inner
     display: flex
     align-items: center
@@ -151,7 +73,26 @@
     @media (max-width: 991px)
       max-width: 25px
       max-height: 25px
+  &__form
+    padding-left: 40px
+    @media (max-width: 991px)
+      padding-left: 0
+    & .form-callback__form-inner
+      max-width: 608px
+    & .form-callback__button
+      margin-left: 68px
+      @media (max-width: 1440px)
+        margin-left: 0
+        margin-top: 25px
+    & .form-callback__label-politic
+      white-space: nowrap
+      @media (max-width: 991px)
+        white-space: normal
 
+    & .form-callback__politic-inner
+      @media (max-width: 1440px)
+        flex-direction: column
+        align-items: flex-start
 
 
 
